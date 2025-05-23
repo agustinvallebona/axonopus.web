@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axonopus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url('cesped.jpg'); /* Asegurate que la imagen esté en la misma carpeta */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      position: relative;
+      color: #2e5d34;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.323);
+      z-index: -1;
+    }
+
+    header {
+      background: linear-gradient(135deg, #207024, #249129);
+      color: white;
+      padding: 10px 10px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header h3 {
+      font-size: 1.2em;
+    }
+
+    .contenido {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .contenido h2 {
+      color: #0d5b10;
+      margin-bottom: 15px;
+    }
+
+    .contenido p {
+      max-width: 800px;
+      margin: auto;
+      color: #05250c;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .btn {
+  display: inline-block;
+  background-color: #45b526;
+  color: white;
+  padding: 14px 28px;
+  margin: 20px 10px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.05em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+   .btn:hover {
+  background-color: #388e3c;
+  transform: scale(1.03);
+}
+
+
+    .servicios-lista {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .servicios-lista ul {
+      list-style: none;
+      padding: 0;
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .servicios-lista li {
+      padding: 5px 0;
+      font-weight: 500;
+    }
+
+    .contacto {
+      margin: 40px 20px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.674);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .contacto h3 {
+      margin-bottom: 10px;
+      color: #042e0a;
+    }
+
+    footer {
+      background-color: #0b840f;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      .btn { width: 90%; }
+    }
+    .contenido h2 {
+  background-color: rgba(255, 255, 255, 0.811);
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Axonopus</h1>
+    <h3>Mantenimiento de jardines y espacios verdes</h3>
+  </header>
+
+  <section class="contenido">
+    <h2>Sobre Nosotros</h2>
+    <p>Somos un emprendimiento local dedicado a mantenimiento de jardines, corte de césped y mejoras en espacios verdes. Nuestro compromiso es brindar un servicio confiable, responsable y personalizado. ¡Gracias por confiar en nosotros!</p>
+  </section>
+
+  <section class="contenido">
+    <button class="btn" onclick="toggleServicios()">Ver Servicios</button>
+    <div id="servicios" class="servicios-lista">
+      <ul>
+        <li>Talud</li>
+        <li>Podas</li>
+        <li>Desmalezado</li>
+        <li>Corte de césped</li>
+        <li>Diseño y limpieza de canteros</li>
+        <li>Hidrolavados</li>
+        <li>Fumigación: insecticidas y herbicidas</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contacto">
+    <h3>¿Querés comunicarte? Hacelo directo y te asesoramos sin compromiso</h3>
+    <a class="btn" href="https://wa.me/59891686560" target="_blank">WhatsApp Agustín</a>
+    <a class="btn" href="https://wa.me/59897433911" target="_blank">WhatsApp Alexis</a>
+    <a class="btn" href="mailto:agus.vallebona@gmail.com">Gmail</a>
+    <a class="btn" href="trabajos.html">Ver nuestros trabajos</a>
+  </section>
+
+  <footer>
+    @2025 Axonopus - Maldonado, Uruguay
+  </footer>
+
+  <script>
+    function toggleServicios() {
+      const lista = document.getElementById("servicios");
+      lista.style.display = lista.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
+
